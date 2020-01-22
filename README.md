@@ -40,6 +40,12 @@ Dockers were made based on linux containers
 * `docker restart <container-name>` - node might not respond to restart signal, so it hard restarts it, so it can be slow for some images
 * `docker search python` - its a CLI search for dockers on python, we can go to Hub and also search
 
+### Commands to build docker
+
+* `docker login`
+* `docker build -t my-own-api-server .` - -t represents tag, i.e. my-own-api-server will be my image name, . checks for a DockerFile in that pwd
+
+
 
 
 
