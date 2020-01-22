@@ -44,7 +44,7 @@ Dockers were made based on linux containers
 
 * `docker login`
 * `docker build -t my-own-api-server .` - -t represents tag, i.e. my-own-api-server will be my image name, . checks for a DockerFile in that pwd
-
+* `docker run --init --rm --publish 3001:3001 my-own-api-server` - to run the built container, publish to create a hole in container to access outside in host
 
 
 
