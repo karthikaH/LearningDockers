@@ -9,7 +9,13 @@ RUN mkdir /home/node/code
 
 WORKDIR /home/node/code
 
-#  copies the entire folder
+# making use of layers - caching to prevent unnecessary npm install
+# but this would create state cache in case of dependencies get patches
+COPY --chown=node:node package-lock.json package.json ./
+
+RUN npm ci
+
+# copies the entire folder
 COPY --chown=node:node . .
 
 RUN npm ci
